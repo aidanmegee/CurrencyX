@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CurrencyX</string>
+    <string name="currency_x">CurrencyX</string>
+    <string name="currency_conversion">Currency Conversion</string>
+    <string name="conversion">Conversion</string>
+    <string name="convert">convert</string>
+    <string name="developed_by_aidan_megee">Developed By Aidan Megee</string>
+</resources>
