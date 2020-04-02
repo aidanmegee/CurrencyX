@@ -2,6 +2,7 @@ package com.example.currencyx;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -11,7 +12,6 @@ import android.widget.EditText;
 
 public class ExchangeActivity extends AppCompatActivity {
 
-    double result;
     double USD = 0.62; //Exchange rates as member fields // Create a dictionary holding the currency as Keys and rates as Values e.g. {USD : 0.62}
     double EUR = 0.55; //Euro
     double GBP = 0.49; //British pounds
@@ -24,8 +24,13 @@ public class ExchangeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currency);
 
-//        Button exchangeRatesButton = findViewById(R.id.exchangeRates);
-//        exchangeRatesButton.setOnClickListener(New Onc);
+        Button exchangeRatesButton = findViewById(R.id.exchangeRates);
+        exchangeRatesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openExchangeRatesActivity();
+            }
+        });
 
     }
 
@@ -54,6 +59,11 @@ public class ExchangeActivity extends AppCompatActivity {
         EditText currencyConverted = findViewById(R.id.currency_converted);
         aud.setText("");
         currencyConverted.setText("");
+    }
+
+    public void openExchangeRatesActivity() {
+        Intent exchangeRates = new Intent(this, ExchangeRatesActivity.class);
+        startActivity(exchangeRates);
     }
 
 }

@@ -19,7 +19,6 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/conversion"
         android:layout_centerInParent="true"
-        android:paddingTop="300sp"
         android:text="@string/developed_by_aidan_megee"/>
 
 
