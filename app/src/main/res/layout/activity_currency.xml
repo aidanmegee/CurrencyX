@@ -1,70 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".ExchangeActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="124dp"
-        android:fontFamily="@font/days_one"
-        android:text="@string/currency_conversion"
-        android:textColor="#33cc5a"
-        android:textSize="30sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/currency_to_be_converted"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
-        android:id="@+id/currency_to_be_converted"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="79dp"
-        android:layout_marginEnd="79dp"
-        android:layout_marginBottom="106dp"
-        android:autofillHints="Enter Amount"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/convert"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/currency_converted"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="229dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/convert" />
+        android:id="@+id/aud"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:hint="@string/enter_aud"
+        android:textAlignment="center"
+        android:autofillHints="@string/enter_aud"
+        android:inputType="number|numberDecimal" />
 
     <Button
         android:id="@+id/convert"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginBottom="116dp"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/days_one"
         android:onClick="currencyConversion"
         android:text="@string/convert"
-        android:textSize="25sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/currency_converted"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currency_to_be_converted" />
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/currency_converted"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:hint="@string/converted_currency"
+        android:autofillHints="@string/converted_currency"
+        android:inputType="number|numberDecimal" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/days_one"
+        android:onClick="reset"
+        android:text="@string/reset"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/exchangeRates"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/days_one"
+        android:onClick="exchangeRates"
+        android:text="@string/exchange_rates"
+        android:textSize="25sp" />
+
+    <TableRow
+
+        />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</TableLayout>
+

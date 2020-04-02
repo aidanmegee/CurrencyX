@@ -5,4 +5,8 @@
     <string name="conversion">Conversion</string>
     <string name="convert">convert</string>
     <string name="developed_by_aidan_megee">Developed By Aidan Megee</string>
+    <string name="enter_aud">Enter AUD</string>
+    <string name="converted_currency">Converted Currency</string>
+    <string name="reset">RESET</string>
+    <string name="exchange_rates">Exchange Rates</string>
 </resources>

@@ -8,14 +8,13 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button conversion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        conversion = (Button) findViewById(R.id.button); //finds resource id for button
+        Button conversion = findViewById(R.id.button); //finds resource id for button
         conversion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //onClick method sends intent to start ExchangeActivity
