@@ -17,7 +17,7 @@ public class ExchangeRatesActivity extends AppCompatActivity {
         Button doneButton = findViewById(R.id.done);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //when "Done" is clicked, finish activity returning to Exchange activity
                 finish();
             }
         });

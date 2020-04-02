@@ -51,9 +51,8 @@ public class ExchangeActivity extends AppCompatActivity {
         currencyConversion();
     }
 
-    public void resetExchange(View view) {
+    public void resetExchange(View view) { //resets values of edit text elements
         Button reset = findViewById(R.id.reset);
-
         reset.setEnabled(true);
         EditText aud = findViewById(R.id.aud);
         EditText currencyConverted = findViewById(R.id.currency_converted);
@@ -61,7 +60,7 @@ public class ExchangeActivity extends AppCompatActivity {
         currencyConverted.setText("");
     }
 
-    public void openExchangeRatesActivity() {
+    public void openExchangeRatesActivity() { //sends intent to exchange rate activity to start
         Intent exchangeRates = new Intent(this, ExchangeRatesActivity.class);
         startActivity(exchangeRates);
     }
