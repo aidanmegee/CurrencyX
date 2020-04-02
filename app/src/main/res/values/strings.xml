@@ -9,4 +9,5 @@
     <string name="converted_currency">Converted Currency</string>
     <string name="reset">RESET</string>
     <string name="exchange_rates">Exchange Rates</string>
+    <string name="done">DONE</string>
 </resources>

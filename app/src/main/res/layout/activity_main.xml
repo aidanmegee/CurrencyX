@@ -1,61 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:coontext=".MainActivity">
 
-    <TextView
-        android:id="@+id/currency_x"
-        android:layout_width="152dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="92dp"
-        android:fontFamily="@font/lobster"
-        android:text="@string/currency_x"
-        android:textColor="#33cc5a"
-        android:textSize="35sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/money" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/conversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="83dp"
-        android:text="@string/conversion"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="@+id/currency_x"
-        app:layout_constraintTop_toBottomOf="@+id/currency_x" />
-
-    <ImageView
-        android:id="@+id/money"
-        android:layout_width="235dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginBottom="37dp"
-        android:contentDescription="@null"
-        app:layout_constraintBottom_toTopOf="@+id/currency_x"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/money" />
+        android:layout_centerInParent="true"
+        android:text="@string/conversion" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:text="@string/developed_by_aidan_megee"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/conversion"
+        android:layout_centerInParent="true"
+        android:paddingTop="300sp"
+        android:text="@string/developed_by_aidan_megee"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
