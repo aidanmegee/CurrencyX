@@ -3,34 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#0E8C3A"
     android:orientation="vertical"
     tools:coontext=".MainActivity">
 
 
-    <Button
-        android:id="@+id/conversion"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:text="@string/conversion" />
+        android:contentDescription="@string/moneyLogo"
+        android:src="@drawable/money" />
+
+    <Button
+        android:id="@+id/conversion"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="#37BC61"
+        android:fontFamily="@font/days_one"
+        android:text="@string/conversion"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@+id/conversion"
         android:layout_centerInParent="true"
-        android:text="@string/developed_by_aidan_megee"/>
+        android:layout_marginTop="50dp"
+        android:text="@string/developed_by_aidan_megee"
+        android:textColor="#DBE6E0"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/exchangeRates"
         android:layout_width="match_parent"
         android:layout_height="60sp"
-        android:layout_marginTop="40dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:background="#37BC61"
         android:fontFamily="@font/days_one"
         android:text="@string/exchange_rates"
-        android:textSize="25sp"
-        android:background="@color/colorAccent"/>
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
 
 
 </RelativeLayout>

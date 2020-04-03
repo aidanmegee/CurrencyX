@@ -1,11 +1,17 @@
 package com.example.currencyx;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,10 +26,21 @@ public class ExchangeActivity extends AppCompatActivity {
     double JPY = 65.5; //Japanese Yen
     double CAD = 0.86; //Canadian Dollar
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currency);
+
+        Window window = getWindow(); //current window
+        window.setStatusBarColor(Color.parseColor("#0E8C3A")); //sets status bar colour by parsing hex code string value
+
+        ActionBar actionBar; //Action Bar object
+        actionBar = getSupportActionBar(); //retrieve current action bar.this
+
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#37BC61")); //new colour drawable object
+        assert actionBar != null;
+        actionBar.setBackgroundDrawable(colorDrawable); //changes colour to new hex colour value
 
     }
 
