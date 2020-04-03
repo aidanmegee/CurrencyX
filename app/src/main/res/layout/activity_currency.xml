@@ -14,15 +14,15 @@
         android:inputType="number|numberDecimal"
         android:textAlignment="center" />
 
-    <Button
+    <TextView
         android:id="@+id/convert"
         android:layout_width="match_parent"
         android:layout_height="60sp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/days_one"
-        android:onClick="convertOnClick"
-        android:text="@string/convert"
-        android:textSize="25sp" />
+        android:text="@string/aud_to"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
 
     <EditText
         android:id="@+id/currency_converted"
@@ -60,6 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onButtonClick"
                 android:text="@string/unitedStates_dollar"
                 android:textSize="42sp" />
 
@@ -69,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onButtonClick"
                 android:text="@string/european_pounds"
                 android:textSize="42sp" />
 
@@ -78,6 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onButtonClick"
                 android:text="@string/greatBritish_pounds"
                 android:textSize="42sp" />
 
@@ -95,6 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onButtonClick"
                 android:text="@string/indian_rupee"
                 android:textSize="42sp" />
 
@@ -104,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onButtonClick"
                 android:text="@string/japanese_yen"
                 android:textSize="42sp" />
 
@@ -113,6 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onButtonClick"
                 android:text="@string/canadian_dollar"
                 android:textSize="42sp" />
 

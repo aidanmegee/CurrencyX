@@ -18,4 +18,5 @@
     <string name="greatBritish_pounds">GBP</string>
     <string name="european_pounds">EUR</string>
     <string name="unitedStates_dollar">USD</string>
+    <string name="aud_to">AUD TO</string>
 </resources>
