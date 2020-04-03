@@ -27,7 +27,8 @@ public class ExchangeActivity extends AppCompatActivity {
 
     }
 
-    public void audToUSD() { ////AUD --> United States Dollars
+    @SuppressLint("SetTextI18n")
+    public void audToUSD(double USD) { ////AUD --> United States Dollars
         EditText aud = findViewById(R.id.aud);
         aud.setInputType(InputType.TYPE_CLASS_NUMBER); //input type set to number value
 
@@ -43,7 +44,7 @@ public class ExchangeActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void audToEUR() { //AUD --> EURO POUNDS
+    public void audToEUR(double EUR) { //AUD --> EURO POUNDS
         EditText aud = findViewById(R.id.aud);
         aud.setInputType(InputType.TYPE_CLASS_NUMBER);
 
@@ -59,7 +60,7 @@ public class ExchangeActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void audToGBP() { //AUD --> Great British Pounds
+    public void audToGBP(double GBP) { //AUD --> Great British Pounds
         EditText aud = findViewById(R.id.aud);
         aud.setInputType(InputType.TYPE_CLASS_NUMBER);
 
@@ -75,7 +76,7 @@ public class ExchangeActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void audToINR() { //AUD --> EURO Indian Rupee
+    public void audToINR(double INR) { //AUD --> EURO Indian Rupee
         EditText aud = findViewById(R.id.aud);
         aud.setInputType(InputType.TYPE_CLASS_NUMBER);
 
@@ -91,7 +92,7 @@ public class ExchangeActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void audToJPY() { //AUD --> Japanese Yen
+    public void audToJPY(double JPY) { //AUD --> Japanese Yen
         EditText aud = findViewById(R.id.aud);
         aud.setInputType(InputType.TYPE_CLASS_NUMBER);
 
@@ -107,7 +108,7 @@ public class ExchangeActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void audToCAD() { //AUD --> Canadian Dollars
+    public void audToCAD(double CAD) { //AUD --> Canadian Dollars
         EditText aud = findViewById(R.id.aud);
         aud.setInputType(InputType.TYPE_CLASS_NUMBER);
 
@@ -132,30 +133,30 @@ public class ExchangeActivity extends AppCompatActivity {
         currencyConverted.setText("");
     }
 
-    public void onButtonClick(View view) {
+    public void onButtonClick(View view) { //onClick method handling all currency button clicks
         switch (view.getId()) {
             case (R.id.usd):
-                audToUSD();
+                audToUSD(USD);
                 break;
 
             case (R.id.eur):
-                audToEUR();
+                audToEUR(EUR);
                 break;
 
             case (R.id.gbp):
-                audToGBP();
+                audToGBP(GBP);
                 break;
 
             case (R.id.inr):
-                audToINR();
+                audToINR(INR);
                 break;
 
             case (R.id.jpy):
-                audToJPY();
+                audToJPY(JPY);
                 break;
 
             case (R.id.cad):
-                audToCAD();
+                audToCAD(CAD);
                 break;
         }
     }

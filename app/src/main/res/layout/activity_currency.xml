@@ -32,7 +32,6 @@
         android:autofillHints="@string/converted_currency"
         android:hint="@string/converted_currency"
         android:inputType="number|numberDecimal"
-        android:onClick="convertOnClick"
         android:textAlignment="center" />
 
     <Button
