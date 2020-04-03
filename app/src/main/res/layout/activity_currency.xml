@@ -12,9 +12,9 @@
         android:layout_height="70sp"
         android:autofillHints="@string/enter_aud"
         android:hint="@string/enter_aud"
-        android:textColorHint="#cccccc"
         android:inputType="number|numberDecimal"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColorHint="#cccccc" />
 
     <TextView
         android:id="@+id/convert"
@@ -24,8 +24,8 @@
         android:fontFamily="@font/days_one"
         android:text="@string/aud_to"
         android:textAlignment="center"
-        android:textSize="25sp"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/currency_converted"
@@ -34,19 +34,20 @@
         android:layout_marginTop="20dp"
         android:autofillHints="@string/converted_currency"
         android:hint="@string/converted_currency"
-        android:textColorHint="#cccccc"
         android:inputType="number|numberDecimal"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColorHint="#cccccc" />
 
     <Button
         android:id="@+id/reset"
         android:layout_width="match_parent"
         android:layout_height="60sp"
         android:layout_marginTop="40dp"
+        android:background="#37BC61"
         android:fontFamily="@font/days_one"
         android:onClick="resetExchange"
         android:text="@string/reset"
-        android:background="#37BC61"
+        android:textColor="#ffffff"
         android:textSize="25sp" />
 
     <TableLayout
@@ -63,33 +64,42 @@
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
                 android:layout_weight="1"
+                android:background="#37BC61"
+                android:fontFamily="@font/days_one"
                 android:onClick="onButtonClick"
                 android:text="@string/unitedStates_dollar"
-                android:textSize="42sp"
-                android:background="#37BC61"/>
+                android:textColor="#ffffff"
+                android:textSize="42sp" />
 
             <Button
                 android:id="@+id/eur"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
                 android:layout_weight="1"
+                android:background="#37BC61"
+                android:fontFamily="@font/days_one"
                 android:onClick="onButtonClick"
                 android:text="@string/european_pounds"
-                android:textSize="42sp"
-                android:background="#37BC61"/>
+                android:textColor="#ffffff"
+                android:textSize="42sp" />
 
             <Button
                 android:id="@+id/gbp"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
                 android:layout_weight="1"
+                android:background="#37BC61"
+                android:fontFamily="@font/days_one"
                 android:onClick="onButtonClick"
                 android:text="@string/greatBritish_pounds"
-                android:textSize="42sp"
-                android:background="#37BC61"/>
+                android:textColor="#ffffff"
+                android:textSize="42sp" />
 
         </TableRow>
 
@@ -104,33 +114,45 @@
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
                 android:layout_weight="1"
+                android:background="#37BC61"
+                android:fontFamily="@font/days_one"
                 android:onClick="onButtonClick"
                 android:text="@string/indian_rupee"
-                android:textSize="42sp"
-                android:background="#37BC61"/>
+                android:textColor="#ffffff"
+                android:textSize="42sp" />
 
             <Button
                 android:id="@+id/jpy"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
                 android:layout_weight="1"
+                android:background="#37BC61"
+                android:fontFamily="@font/days_one"
                 android:onClick="onButtonClick"
                 android:text="@string/japanese_yen"
-                android:textSize="42sp"
-                android:background="#37BC61"/>
+                android:textColor="#ffffff"
+                android:textSize="42sp" />
 
             <Button
                 android:id="@+id/cad"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
                 android:layout_weight="1"
+                android:background="#37BC61"
+                android:fontFamily="@font/days_one"
                 android:onClick="onButtonClick"
                 android:text="@string/canadian_dollar"
-                android:textSize="42sp"
-                android:background="#37BC61"/>
+                android:textColor="#ffffff"
+                android:textSize="42sp" />
 
         </TableRow>
 
