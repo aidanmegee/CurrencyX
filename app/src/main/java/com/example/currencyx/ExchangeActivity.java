@@ -24,14 +24,6 @@ public class ExchangeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currency);
 
-        Button exchangeRatesButton = findViewById(R.id.exchangeRates);
-        exchangeRatesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openExchangeRatesActivity();
-            }
-        });
-
     }
 
     public void currencyConversion() { //method for converting currency
@@ -47,8 +39,8 @@ public class ExchangeActivity extends AppCompatActivity {
         currencyConverted.setText(String.valueOf(result));
     }
 
-    public void convertOnClick(View view) { //convert method that calls currencyConversion for exchange
-        currencyConversion();
+    public void convertOnClick(View view) { //On Click method that coverts currency
+        currencyConversion(); //convert method called currencyConversion
     }
 
     public void resetExchange(View view) { //resets values of edit text elements
@@ -58,11 +50,6 @@ public class ExchangeActivity extends AppCompatActivity {
         EditText currencyConverted = findViewById(R.id.currency_converted);
         aud.setText("");
         currencyConverted.setText("");
-    }
-
-    public void openExchangeRatesActivity() { //sends intent to exchange rate activity to start
-        Intent exchangeRates = new Intent(this, ExchangeRatesActivity.class);
-        startActivity(exchangeRates);
     }
 
 }

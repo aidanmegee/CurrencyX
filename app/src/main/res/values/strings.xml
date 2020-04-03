@@ -12,4 +12,10 @@
     <string name="done">DONE</string>
     <string name="exchange_rate_values">1 Australian Dollar Equals 0.62 USD \n \n 1 Australian Dollar Equals 0.55 EUR \n \n 1 Australian Dollar Equals 0.49 GBP \n \n 1 Australian Dollar Equals 46.5 INR \n \n1 Australian Dollar Equals 65.5 JPY \n \n 1 Australian Dollar Equals 0.86 CAD</string>
     <string name="exchange_rates_header">Current Exchange Rates As Of the 2nd of April 2020</string>
+    <string name="canadian_dollar">CAD</string>
+    <string name="japanese_yen">JPY</string>
+    <string name="indian_rupee">INR</string>
+    <string name="greatBritish_pounds">GBP</string>
+    <string name="european_pounds">EUR</string>
+    <string name="unitedStates_dollar">USD</string>
 </resources>

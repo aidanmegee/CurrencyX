@@ -21,5 +21,16 @@
         android:layout_centerInParent="true"
         android:text="@string/developed_by_aidan_megee"/>
 
+    <Button
+        android:id="@+id/exchangeRates"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/days_one"
+        android:text="@string/exchange_rates"
+        android:textSize="25sp"
+        android:background="@color/colorAccent"/>
+
 
 </RelativeLayout>

@@ -9,7 +9,8 @@
         android:text="@string/exchange_rates_header"
         android:textSize="40sp"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,8 +18,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
         android:layout_alignParentBottom="true"
+        android:textAlignment="center"
         android:text="@string/exchange_rate_values"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold"/>
 
 
     <Button
