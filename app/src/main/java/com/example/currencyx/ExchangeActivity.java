@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 public class ExchangeActivity extends AppCompatActivity {
 
+
+    EditText aud;
     double USD = 0.62; //Exchange rates as member fields // Create a dictionary holding the currency as Keys and rates as Values e.g. {USD : 0.62}
     double EUR = 0.55; //Euro
     double GBP = 0.49; //British pounds
@@ -44,11 +46,14 @@ public class ExchangeActivity extends AppCompatActivity {
 
     }
 
+    public void audAmountInput() { //helper method for finding AUD input from user
+        aud = findViewById(R.id.aud);
+        aud.setInputType(InputType.TYPE_CLASS_NUMBER); //input type set to number value
+    }
+
     @SuppressLint("SetTextI18n")
     public void audToUSD(double USD) { ////AUD --> United States Dollars
-        EditText aud = findViewById(R.id.aud);
-        aud.setInputType(InputType.TYPE_CLASS_NUMBER); //input type set to number value
-
+        audAmountInput();
         TextView usdConversion = findViewById(R.id.convert);
         usdConversion.setText("AUD TO USD");
 
@@ -62,8 +67,7 @@ public class ExchangeActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void audToEUR(double EUR) { //AUD --> EURO POUNDS
-        EditText aud = findViewById(R.id.aud);
-        aud.setInputType(InputType.TYPE_CLASS_NUMBER);
+        audAmountInput();
 
         TextView eurConversion = findViewById(R.id.convert);
         eurConversion.setText("AUD TO EURO");
@@ -78,8 +82,7 @@ public class ExchangeActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void audToGBP(double GBP) { //AUD --> Great British Pounds
-        EditText aud = findViewById(R.id.aud);
-        aud.setInputType(InputType.TYPE_CLASS_NUMBER);
+        audAmountInput();
 
         TextView gbpConversion = findViewById(R.id.convert);
         gbpConversion.setText("AUD TO GBP");
@@ -94,8 +97,7 @@ public class ExchangeActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void audToINR(double INR) { //AUD --> EURO Indian Rupee
-        EditText aud = findViewById(R.id.aud);
-        aud.setInputType(InputType.TYPE_CLASS_NUMBER);
+        audAmountInput();
 
         TextView inrConversion = findViewById(R.id.convert);
         inrConversion.setText("AUD TO INR");
@@ -110,8 +112,7 @@ public class ExchangeActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void audToJPY(double JPY) { //AUD --> Japanese Yen
-        EditText aud = findViewById(R.id.aud);
-        aud.setInputType(InputType.TYPE_CLASS_NUMBER);
+        audAmountInput();
 
         TextView jpyConversion = findViewById(R.id.convert);
         jpyConversion.setText("AUD TO JPY");
@@ -126,8 +127,7 @@ public class ExchangeActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void audToCAD(double CAD) { //AUD --> Canadian Dollars
-        EditText aud = findViewById(R.id.aud);
-        aud.setInputType(InputType.TYPE_CLASS_NUMBER);
+        audAmountInput();
 
         TextView cadConversion = findViewById(R.id.convert);
         cadConversion.setText("AUD TO CAD");
