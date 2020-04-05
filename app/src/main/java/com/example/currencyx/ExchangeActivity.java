@@ -10,17 +10,18 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class ExchangeActivity extends AppCompatActivity {
 
-
-    EditText aud;
+    EditText audText;
     double USD = 0.62; //Exchange rates as member fields // Create a dictionary holding the currency as Keys and rates as Values e.g. {USD : 0.62}
     double EUR = 0.55; //Euro
     double GBP = 0.49; //British pounds
@@ -47,8 +48,9 @@ public class ExchangeActivity extends AppCompatActivity {
     }
 
     public void audAmountInput() { //helper method for finding AUD input from user
-        aud = findViewById(R.id.aud);
-        aud.setInputType(InputType.TYPE_CLASS_NUMBER); //input type set to number value
+        audText = findViewById(R.id.aud);
+        audText.setInputType(InputType.TYPE_CLASS_NUMBER); //input type set to number value
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -60,7 +62,7 @@ public class ExchangeActivity extends AppCompatActivity {
         EditText currencyConverted = findViewById(R.id.currency_converted);
         currencyConverted.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-        double dollars = Integer.parseInt(aud.getText().toString()); //wraps Integer value to produce the string value of dollars converted
+        double dollars = Integer.parseInt(audText.getText().toString()); //wraps Integer value to produce the string value of dollars converted
         double result = dollars * USD;
         currencyConverted.setText(String.valueOf(result)); //returns string value of conversion
     }
@@ -75,7 +77,7 @@ public class ExchangeActivity extends AppCompatActivity {
         EditText currencyConverted = findViewById(R.id.currency_converted);
         currencyConverted.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-        double dollars = Integer.parseInt(aud.getText().toString());
+        double dollars = Integer.parseInt(audText.getText().toString());
         double result = dollars * EUR;
         currencyConverted.setText(String.valueOf(result));
     }
@@ -90,7 +92,7 @@ public class ExchangeActivity extends AppCompatActivity {
         EditText currencyConverted = findViewById(R.id.currency_converted);
         currencyConverted.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-        double dollars = Integer.parseInt(aud.getText().toString());
+        double dollars = Integer.parseInt(audText.getText().toString());
         double result = dollars * GBP;
         currencyConverted.setText(String.valueOf(result));
     }
@@ -105,7 +107,7 @@ public class ExchangeActivity extends AppCompatActivity {
         EditText currencyConverted = findViewById(R.id.currency_converted);
         currencyConverted.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-        double dollars = Integer.parseInt(aud.getText().toString());
+        double dollars = Integer.parseInt(audText.getText().toString());
         double result = dollars * INR;
         currencyConverted.setText(String.valueOf(result));
     }
@@ -120,7 +122,7 @@ public class ExchangeActivity extends AppCompatActivity {
         EditText currencyConverted = findViewById(R.id.currency_converted);
         currencyConverted.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-        double dollars = Integer.parseInt(aud.getText().toString());
+        double dollars = Integer.parseInt(audText.getText().toString());
         double result = dollars * JPY;
         currencyConverted.setText(String.valueOf(result));
     }
@@ -135,7 +137,7 @@ public class ExchangeActivity extends AppCompatActivity {
         EditText currencyConverted = findViewById(R.id.currency_converted);
         currencyConverted.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-        double dollars = Integer.parseInt(aud.getText().toString());
+        double dollars = Integer.parseInt(audText.getText().toString());
         double result = dollars * CAD;
         currencyConverted.setText(String.valueOf(result));
     }

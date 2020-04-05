@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="130dp"
         android:text="@string/exchange_rate_values"
         android:textAlignment="center"
         android:textColor="#cccccc"
@@ -34,6 +34,18 @@
         android:background="#37BC61"
         android:fontFamily="@font/days_one"
         android:text="@string/done"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/conversion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#37BC61"
+        android:fontFamily="@font/days_one"
+        android:text="@string/conversion"
         android:textColor="#ffffff"
         android:textSize="25sp" />
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -31,6 +32,14 @@ public class ExchangeRatesActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable); //changes colour to new hex colour value
 
+        Button conversionButton = findViewById(R.id.conversion);
+        conversionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { //when conversion is clicked, starts Exchange Activity from this
+                exchangeActivity();
+            }
+        });
+
         Button doneButton = findViewById(R.id.done);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +48,11 @@ public class ExchangeRatesActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void exchangeActivity() { //method to start new activity from exchange rates activity
+        Intent exchangeIntent = new Intent(this, ExchangeActivity.class);
+        startActivity(exchangeIntent);
     }
 
 }
