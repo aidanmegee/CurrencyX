@@ -33,18 +33,18 @@ public class SettingsActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable); //changes colour to new hex colour value
 
         Button instructionsButton = findViewById(R.id.instructions);
-        instructionsButton.setOnClickListener(new View.OnClickListener() {
+        instructionsButton.setOnClickListener(new View.OnClickListener() { //onclick to show instructions for user
             @Override
             public void onClick(View v) {
-                showInstructions();
+                showInstructions(); //call show exchange rate method
             }
         });
 
         Button exchangeRatesButton = findViewById(R.id.exchangeRates);
-        exchangeRatesButton.setOnClickListener(new View.OnClickListener() {
+        exchangeRatesButton.setOnClickListener(new View.OnClickListener() { //onclick to show exchange rates
             @Override
             public void onClick(View v) {
-                showExchangeRates();
+                showExchangeRates(); //call show exchange rate method
             }
         });
 
@@ -52,7 +52,7 @@ public class SettingsActivity extends AppCompatActivity {
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                finish(); //returns to previous activity (exchange activity)
             }
         });
     }
@@ -63,7 +63,7 @@ public class SettingsActivity extends AppCompatActivity {
         String instructions = "Enter an Amount of AUD then press any currency button to convert!";
         instructionsIntent.putExtra("Instructions", instructions); //stores values of string instructions
         Toast.makeText(getApplicationContext(), instructions, Toast.LENGTH_LONG).show(); //shows toast popup for instructions
-        startActivity(instructionsIntent);
+        startActivity(instructionsIntent); //starts activity with instructions as intent
 
     }
 
@@ -73,6 +73,6 @@ public class SettingsActivity extends AppCompatActivity {
         String exchangeRates = getResources().getString(R.string.exchange_rate_values); //finds string resource value from string xml
         exchangeRatesIntent.putExtra("Exchange Rates", exchangeRates);
         Toast.makeText(getApplicationContext(), exchangeRates, Toast.LENGTH_LONG).show(); //shows toast popup for exchange rates
-        startActivity(exchangeRatesIntent);
+        startActivity(exchangeRatesIntent); //starts activity with exchange rates as intent
     }
 }
