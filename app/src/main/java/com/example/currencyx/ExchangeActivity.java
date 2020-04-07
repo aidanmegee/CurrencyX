@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -15,6 +16,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class ExchangeActivity extends AppCompatActivity {
@@ -43,12 +45,18 @@ public class ExchangeActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable); //changes colour to new hex colour value
 
+        Button settingsButton = findViewById(R.id.settings);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingsActivity();
+            }
+        });
     }
 
     public void audAmountInput() { //helper method for finding AUD input from user
         audText = findViewById(R.id.aud);
         audText.setInputType(InputType.TYPE_CLASS_NUMBER); //input type set to number value
-
     }
 
     @SuppressLint("SetTextI18n")
@@ -176,6 +184,11 @@ public class ExchangeActivity extends AppCompatActivity {
                 audToCAD(CAD);
                 break;
         }
+    }
+
+    public void settingsActivity() {
+        Intent settingsIntent = new Intent(this, SettingsActivity.class);
+        startActivity(settingsIntent);
     }
 
 }

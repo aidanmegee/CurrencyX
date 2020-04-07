@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#0E8C3A"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+
+    <Button
+        android:id="@+id/doneSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#37BC61"
+        android:fontFamily="@font/days_one"
+        android:text="@string/done"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#37BC61"
+        android:fontFamily="@font/days_one"
+        android:text="@string/instructions"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/exchangeRates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:background="#37BC61"
+        android:fontFamily="@font/days_one"
+        android:text="@string/exchange_rates"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+
+
+</RelativeLayout>

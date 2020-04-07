@@ -20,4 +20,6 @@
     <string name="unitedStates_dollar">USD</string>
     <string name="aud_to">AUD TO</string>
     <string name="moneyLogo">MoneyLogo</string>
+    <string name="settings">Settings</string>
+    <string name="instructions">Instructions</string>
 </resources>
